@@ -36,6 +36,11 @@ public class HotItems {
 
         // 创建 execution environment
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        /**
+         * ProcessingTime：事件被处理的时间。也就是由机器的系统时间来决定。
+         *
+         * EventTime：事件发生的时间。一般就是数据本身携带的时间。
+         */
         // 告诉系统按照 EventTime 处理
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         // 为了打印到控制台的结果不乱序，我们配置全局的并发为1，改变并发对结果正确性没有影响

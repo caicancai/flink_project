@@ -1,0 +1,21 @@
+# Prism local all-in-one development environment.
+# Maintainer: Al-assad <assad.dev@outlook.com>
+
+version: "3"
+
+services:
+
+  prism-mysql:
+    image: mysql:8
+    container_name: prism-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Asia/Shanghai
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    volumes:
+      - ./mysql-init:/docker-entrypoint-initdb.d
+
