@@ -130,6 +130,12 @@ under the License.
 			<!-- The dependency is available only for stable releases, SNAPSHOT dependency need build by yourself. -->
 			<version>${connector.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>com.ververica</groupId>
+            <artifactId>flink-sql-connector-tidb-cdc</artifactId>
+            <!-- The dependency is available only for stable releases, SNAPSHOT dependency need build by yourself. -->
+            <version>${connector.version}</version>
+        </dependency>
 
 
 		<dependency>
@@ -303,7 +309,7 @@ under the License.
 				<dependency>
 					<groupId>org.apache.flink</groupId>
 					<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
-					<version>${flink.version}</version>
+					<version>1.16.1</version>
 					<scope>compile</scope>
 				</dependency>
 			</dependencies>
