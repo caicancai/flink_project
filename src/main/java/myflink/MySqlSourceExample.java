@@ -1,4 +1,4 @@
-package myflink.cdc;
+package myflink;
 
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
 import com.ververica.cdc.debezium.JsonDebeziumDeserializationSchema;
@@ -8,10 +8,10 @@ import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
-public class MySqlSourceExample_Map {
+public class MySqlSourceExample {
     public static void main(String[] args) throws Exception {
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
-                .hostname("192.168.11.150")
+                .hostname("127.0.0.1")
                 .port(3306)
                 .includeSchemaChanges(true)
                 .databaseList("faker") // set captured database

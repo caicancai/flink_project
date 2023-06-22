@@ -56,26 +56,13 @@ under the License.
 		<!-- These dependencies are provided, because they should not be packaged into the JAR file. -->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-java</artifactId>
-			<version>${flink.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.flink/flink-streaming-java -->
-		<dependency>
-			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-streaming-java</artifactId>
 			<version>${flink.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-clients</artifactId>
 			<version>${flink.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.62</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.flink</groupId>
@@ -88,11 +75,6 @@ under the License.
 			<artifactId>flink-sql-connector-mysql-cdc</artifactId>
 			<version>${connector.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.ververica</groupId>
-			<artifactId>flink-sql-connector-mysql-cdc</artifactId>
-			<version>${connector.version}</version>
-		</dependency>
 
 		<!-- flink-connector-jdbc -->
 		<dependency>
@@ -100,8 +82,6 @@ under the License.
 			<artifactId>flink-connector-jdbc</artifactId>
 			<version>${flink.version}</version>
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>org.apache.flink</groupId>
@@ -121,23 +101,6 @@ under the License.
 			<artifactId>flink-table-planner_2.12</artifactId>
 			<version>1.16.1</version>
 		</dependency>
-
-
-
-		<dependency>
-			<groupId>com.ververica</groupId>
-			<artifactId>flink-sql-connector-sqlserver-cdc</artifactId>
-			<!-- The dependency is available only for stable releases, SNAPSHOT dependency need build by yourself. -->
-			<version>${connector.version}</version>
-		</dependency>
-        <dependency>
-            <groupId>com.ververica</groupId>
-            <artifactId>flink-sql-connector-tidb-cdc</artifactId>
-            <!-- The dependency is available only for stable releases, SNAPSHOT dependency need build by yourself. -->
-            <version>${connector.version}</version>
-        </dependency>
-
-
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-sql-connector-elasticsearch7</artifactId>
@@ -171,13 +134,6 @@ under the License.
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 			<scope>runtime</scope>
-		</dependency>
-
-		<!--        mysql-->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.29</version>
 		</dependency>
 	</dependencies>
 
